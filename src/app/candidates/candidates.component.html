@@ -1,12 +1,6 @@
-<div><span>Name: </span>{{candidate.name}}</div>
-
-<div>
-  <label>name:
-    <input [(ngModel)]="candidate.name" placeholder="name">
-  </label>
-</div>
-
-<div><span>id: </span>{{candidate.id}}</div>
-<div><span>Information: </span>{{candidate.information}}</div>
-<div><span>Position: </span>{{candidate.position}}</div>
-
+<h2>Candidates</h2>
+  <ul>
+    <li *ngFor="let candidate of candidates | async">
+      <span>{{candidate.id}}</span> {{candidate.name}}
+    </li>
+  </ul>
