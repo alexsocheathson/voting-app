@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {Candidate} from '../candidate';
+import { AngularFirestore } from 'angularfire2/firestore';
+import { Observable } from 'rxjs';
+
+import { Candidate } from '../candidate';
 
 
 @Component({
@@ -8,14 +11,11 @@ import {Candidate} from '../candidate';
   styleUrls: ['./candidates.component.css']
 })
 export class CandidatesComponent implements OnInit {
-  candidate: Candidate = {
-    id: 1,
-    name: 'Alex',
-    information: 'A senior computer science major!',
-    position: 'Ole Development Team',
-  };
+  candidates: Observable<any[]>;
 
-  constructor() { }
+  constructor(db: AngularFirestore) {
+    this.candidates = db.collection('candidates').valueChanges();
+  }
 
   ngOnInit() {
   }
