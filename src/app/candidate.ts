@@ -3,4 +3,5 @@ export class Candidate {
   name: string;
   information: string;
   position: string;
+  // numVotes: number;
 }

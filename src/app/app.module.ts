@@ -7,11 +7,13 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 
 import { AppComponent } from './app.component';
 import { CandidatesComponent } from './candidates/candidates.component';
+import { CandidateDetailComponent } from './candidate-detail/candidate-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CandidatesComponent
+    CandidatesComponent,
+    CandidateDetailComponent
   ],
   imports: [
     BrowserModule,

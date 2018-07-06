@@ -1,6 +1,10 @@
 <h2>Candidates</h2>
   <ul>
-    <li *ngFor="let candidate of candidates | async">
-      <span>{{candidate.id}}</span> {{candidate.name}}
+    <li *ngFor="let candidate of candidates | async" (click)="onSelect(candidate)">
+      <label>
+        <input #candidateName [(ngModel)]="candidate.name" placeholder="name">
+      </label>
+      <span> Name:{{candidate.name}} ID: {{candidate.id}}</span>  Information: {{candidate.information}} Position: {{candidate.position}}
+      <button (click)="deleteCandidate(candidate)">X</button> <button (click)="updateCandidate(candidate)">Update</button>
     </li>
   </ul>
