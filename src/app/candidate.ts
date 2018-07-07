@@ -1,7 +1,7 @@
 export class Candidate {
-  id: number;
-  name: string;
+  firstName: string;
+  lastName: string;
   information: string;
   position: string;
-  // numVotes: number;
+  numVotes: number;
 }

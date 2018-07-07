@@ -8,18 +8,22 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AppComponent } from './app.component';
 import { CandidatesComponent } from './candidates/candidates.component';
 import { CandidateDetailComponent } from './candidate-detail/candidate-detail.component';
+import { CandidateUpdateComponent } from './candidate-update/candidate-update.component';
+import { AppRoutingModule } from './/app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     CandidatesComponent,
-    CandidateDetailComponent
+    CandidateDetailComponent,
+    CandidateUpdateComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

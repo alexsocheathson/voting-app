@@ -1,0 +1,21 @@
+<h2>Update Candidate Details</h2>
+<div *ngFor="let candidate of candidates | async" (click)="onSelect(candidate)">
+    <label>
+      Name:
+      <input [(ngModel)]="candidate.firstName" placeholder="First Name">
+    </label>
+    <label>
+      <input [(ngModel)]="candidate.lastName" placeholder="Last Name">
+    </label>
+    <label>
+      Information:
+      <input [(ngModel)]="candidate.information" placeholder="Last Name">
+    </label>
+    <label>
+      Position:
+      <input [(ngModel)]="candidate.position" placeholder="Last Name">
+    </label>
+    <p>Number Of Votes: {{candidate.numVotes}}</p>
+    Delete Candidate:
+    <button (click)="deleteCandidate(candidate)">X</button> <button (click)="updateCandidate(candidate)">Update</button>
+  </div>

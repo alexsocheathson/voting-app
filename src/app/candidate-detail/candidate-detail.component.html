@@ -1,3 +1,6 @@
-<p>
-  candidate-detail works!
-</p>
+<h2>Candidate Details</h2>
+<div *ngFor="let candidate of candidates | async">
+  <h3>{{candidate.firstName}}</h3>
+  <p>Information: {{candidate.information}}</p>
+  <p>Position: {{candidate.position}}</p>
+</div>
