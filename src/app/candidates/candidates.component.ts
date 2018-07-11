@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument, DocumentChangeAction} from 'angularfire2/firestore';
 import { Observable } from 'rxjs/';
-import 'rxjs/add/operator/map';
+// import 'rxjs/add/operator/map';
 
 import { Candidate } from '../candidate';
 import { map } from 'rxjs/operators';
