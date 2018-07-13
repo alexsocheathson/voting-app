@@ -1,0 +1,36 @@
+.nav {
+  background-color: #e0135f;
+  padding: 20px 0 20px 0;
+  color: #fefefe;
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.2);
+  z-index: 100;
+
+  .logo {
+    font-size: 60px;
+    font-weight: 700;
+  }
+   a {
+    margin-left: 10px;
+    //align-content: right;
+  }
+
+  .top-bar-right {
+    font-size: 20px;
+    display: none;
+
+    @include breakpoint(medium) {
+      display: block;
+    }
+
+  }
+
+}
+
+.top-bar{
+  background-color: #e0135f;
+
+  ul {
+    background-color: #e0135f;
+  }
+
+}
