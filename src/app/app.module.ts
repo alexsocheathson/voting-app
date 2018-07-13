@@ -10,13 +10,19 @@ import { CandidatesComponent } from './candidates/candidates.component';
 import { CandidateDetailComponent } from './candidate-detail/candidate-detail.component';
 import { CandidateUpdateComponent } from './candidate-update/candidate-update.component';
 import { AppRoutingModule } from './/app-routing.module';
+import { NavComponent } from './shared/nav/nav.component';
+import { HomeComponent } from './home/home.component';
+import { LayoutComponent } from './shared/layout/layout.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CandidatesComponent,
     CandidateDetailComponent,
-    CandidateUpdateComponent
+    CandidateUpdateComponent,
+    NavComponent,
+    HomeComponent,
+    LayoutComponent
   ],
   imports: [
     BrowserModule,

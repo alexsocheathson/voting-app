@@ -1,7 +1,10 @@
+@import 'fonts';
 @import 'settings';
 @import 'foundation';
 @include foundation-everything;
 
 //Include all SCSS shit here for it to compile into the styles.css file
 
-
+@import "component/nav";
+@import "component/home";
+@import "component/sitewide";
