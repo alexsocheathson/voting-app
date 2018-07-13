@@ -34,8 +34,9 @@ export class CandidatesComponent implements OnInit {
   }
 
   increaseVote(selectedCandidate): void {
+    var increaseByOne = selectedCandidate.numVotes + 1;
     this.candidateCollection.doc(selectedCandidate.docID).ref.update({
-      'numVotes': selectedCandidate.numVotes++,
+      'numVotes': increaseByOne,
     });
   }
 

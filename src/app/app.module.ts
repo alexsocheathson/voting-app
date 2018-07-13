@@ -11,8 +11,9 @@ import { CandidateDetailComponent } from './candidate-detail/candidate-detail.co
 import { CandidateUpdateComponent } from './candidate-update/candidate-update.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { NavComponent } from './shared/nav/nav.component';
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './misc/home/home.component';
 import { LayoutComponent } from './shared/layout/layout.component';
+import { VoteCompleteComponent } from './misc/vote-complete/vote-complete.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { LayoutComponent } from './shared/layout/layout.component';
     CandidateUpdateComponent,
     NavComponent,
     HomeComponent,
-    LayoutComponent
+    LayoutComponent,
+    VoteCompleteComponent
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,9 @@
 <app-layout></app-layout>
+<div class="grid-container">
 <h2>Candidate Details</h2>
-<div *ngFor="let candidate of candidates | async">
-  <h3>{{candidate.firstName}}</h3>
-  <p>Information: {{candidate.information}}</p>
-  <p>Position: {{candidate.position}}</p>
+  <div *ngFor="let candidate of candidates | async">
+    <h3>{{candidate.firstName}}</h3>
+    <p>Information: {{candidate.information}}</p>
+    <p>Position: {{candidate.position}}</p>
+  </div>
 </div>

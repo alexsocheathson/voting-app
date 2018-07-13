@@ -1,0 +1,27 @@
+.cta-button {
+  text-align: center;
+  margin-top: 15px;
+
+  a {
+    display: inline-block;
+    height: 40px;
+    line-height: 38px;
+    padding: 0 30px;
+    background: #e0135f;
+    border-radius: 3px;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .3px;
+    //border: 1px solid #fff;
+    text-decoration: none;
+    text-align: center;
+
+  }
+
+  a:hover {
+    color: #3a566b;
+    //border: 1px solid #347adf;
+  }
+
+}

@@ -16,20 +16,20 @@
   min-width: 100vw;
   //height: calc(100% - 146px);
   background-color: #3a566b;
-  z-index: -1;
-  align-content: center;
+  //z-index: -1;
+  //align-content: center;
 }
 
 .home-title {
   font-size: 35px;
   font-weight: 500;
-  margin-top: 8px;
+  margin-top: 15px;
   position: relative;
   color: white;
   text-align: center;
   //height: 100%;
   //margin-top: 60%;
-  z-index: 10;
+  //z-index: 10;
 
   @include breakpoint(large){
     font-size: 58px;
@@ -42,7 +42,7 @@ img {
   height: auto;
   display: block;
   margin-left: auto;
-  margin-top: 150px;
+  margin-top: 90px;
   margin-right: auto;
 }
 
