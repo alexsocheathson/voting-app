@@ -1,0 +1,1 @@
+Requires an angular environment.ts with firebase credentials and environment.prod.ts file to deploy to firebase hosting. All .ts files are ignored in git.
