@@ -4,8 +4,8 @@
   <ul>
     <li *ngFor="let candidate of candidates | async" (click)="onSelect(candidate)">
       <p>{{candidate.firstName}}</p>
-      <!--<a href="/complete"><button (click)="increaseVote(candidate)">Vote</button></a>-->
-      <button (click)="increaseVote(candidate)">Vote</button>
+      <a href="/complete"><button (click)="increaseVote(candidate)">Vote</button></a>
+      <!--<button (click)="increaseVote(candidate)">Vote</button>-->
 
     </li>
   </ul>
