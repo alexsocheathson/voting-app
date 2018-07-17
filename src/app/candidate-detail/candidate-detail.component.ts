@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {AngularFirestore, AngularFirestoreCollection} from 'angularfire2/firestore';
-import {Candidate} from '../candidate';
+import {Candidate} from '../shared/classes/candidate';
 import {map} from 'rxjs/operators';
 import {Observable} from 'rxjs';
 

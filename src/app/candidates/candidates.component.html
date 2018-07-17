@@ -1,11 +1,28 @@
 <app-layout></app-layout>
+
+<!--<div class="grid-container">-->
+  <!--<h2>Candidates</h2>-->
+    <!--<div *ngFor="let candidate of candidates | async" (click)="onSelect(candidate)">-->
+      <!--<p>{{candidate.firstName}}</p>-->
+      <!--<input type="radio" name="position1" value="{{candidate}}">{{candidate.firstName}}-->
+      <!--&lt;!&ndash;<button (click)="increaseVote(candidate)">Vote</button>&ndash;&gt;-->
+    <!--</div>-->
+  <!--&lt;!&ndash;//keep an array of changed candidates?&ndash;&gt;-->
+  <!--<a href="/complete"><button (click)="increaseVote(candidate)">Vote</button></a>-->
+<!--</div>-->
+
 <div class="grid-container">
   <h2>Candidates</h2>
-    <div *ngFor="let candidate of candidates | async" (click)="onSelect(candidate)">
-      <p>{{candidate.firstName}}</p>
-      <input type="radio" name="position" value="{{candidate.firstName}}">{{candidate.firstName}}
-      <!--<button (click)="increaseVote(candidate)">Vote</button>-->
+  <div *ngFor="let position of positions | async ">
+    <h4>{{position.position}}</h4>
+    <div *ngFor="let candidate of candidates | async">
+      <div *ngIf="candidate.position == position.position">
+        <p>{{candidate.firstName}} {{candidate.lastName}}</p>
+        <input type="radio" name="{{position.position}}" value="{{candidate}}">{{candidate.firstName}}
+      </div>
     </div>
-  <!--//keep an array of changed candidates?-->
+  </div>
   <a href="/complete"><button (click)="increaseVote(candidate)">Vote</button></a>
 </div>
+
+

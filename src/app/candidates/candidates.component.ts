@@ -3,8 +3,10 @@ import {AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument, 
 import { Observable } from 'rxjs/';
 // import 'rxjs/add/operator/map';
 
-import { Candidate } from '../candidate';
+import { Candidate } from '../shared/classes/candidate';
+import { Position } from '../shared/classes/position';
 import { map } from 'rxjs/operators';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-candidates',
@@ -13,12 +15,15 @@ import { map } from 'rxjs/operators';
 })
 export class CandidatesComponent implements OnInit {
   private candidateCollection: AngularFirestoreCollection<Candidate>;
+  private positionCollection: AngularFirestoreCollection<Position>;
   candidates: Observable<Candidate[]>;
+  positions: Observable<Position[]>;
 
   selectedCandidate: Candidate;
 
   constructor(db: AngularFirestore) {
     this.candidateCollection = db.collection<Candidate>('candidates');
+    this.positionCollection = db.collection<Position>('positions');
     this.candidates = this.candidateCollection.snapshotChanges().pipe(
       map(actions => actions.map(a => {
         const data = a.payload.doc.data() as Candidate;
@@ -26,6 +31,10 @@ export class CandidatesComponent implements OnInit {
         return {docID, ...data};
       }))
     );
+    this.positions = this.positionCollection.valueChanges();
+    for(let candidate in this.candidates){
+
+    }
   }
 
   onSelect(candidate: Candidate): void {
@@ -34,11 +43,16 @@ export class CandidatesComponent implements OnInit {
   }
 
   increaseVote(selectedCandidate): void {
-    var increaseByOne = selectedCandidate.numVotes + 1;
+    let increaseByOne = selectedCandidate.numVotes + 1;
     this.candidateCollection.doc(selectedCandidate.docID).ref.update({
       'numVotes': increaseByOne,
     });
   }
+
+  candidateForm = new FormGroup({
+
+
+  });
 
   ngOnInit() {
   }
