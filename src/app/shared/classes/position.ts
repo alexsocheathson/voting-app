@@ -1,4 +1,5 @@
-export class Position {
+export class Halls {
   position: string;
   detail: string;
+  hall: string;
 }

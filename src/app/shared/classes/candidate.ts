@@ -4,4 +4,5 @@ export class Candidate {
   information: string;
   position: string;
   numVotes: number;
+  hall: string;
 }
